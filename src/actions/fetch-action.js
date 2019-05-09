@@ -8,7 +8,7 @@ export const receivedWeather = result => ({
 
 export function fetchWeather() {
   return dispatch => {
-    fetch(`http://api.openweathermap.org/data/2.5/find?lat=47.1258945&lon=17.837209&cnt=30&APPID=${APPID}`)
+    fetch(`http://api.openweathermap.org/data/2.5/find?lat=47.1258945&lon=17.837209&units=metric&cnt=30&APPID=${APPID}`)
       .then(res => res.json(),
         error => console.log('An error occured.', error)
       ).then((result) => {
