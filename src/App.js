@@ -12,14 +12,12 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    /**
-     * After the component is mounted, calls the API for data.
-     */
+   //After the component is mounted ask the API for data.
     this.props.onFetchWeather();
   }
   render() {
     return (
-      <div class="container">
+      <div className="container">
         <Title />
         <FilterCities />
         <WeatherBox />

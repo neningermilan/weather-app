@@ -7,7 +7,10 @@ class FilterCities extends React.Component {
     super(props);
     this.searchWeather = searchWeather();
   }
-
+/**
+ * If the data is loaded calls the searchWeather function from the search-action.
+ * @param {event} event 
+ */
   updateSearch(event) {
     const { isLoading, weather } = this.props;
     if (!isLoading) {

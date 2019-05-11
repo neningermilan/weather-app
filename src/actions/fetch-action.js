@@ -5,7 +5,9 @@ export const receivedWeather = result => ({
   type: FETCH_WEATHER,
   payload: result.list
 });
-
+/**
+ * Fetches the Weather data from the API, then trigger the state change.
+ */
 export function fetchWeather() {
   return dispatch => {
     fetch(

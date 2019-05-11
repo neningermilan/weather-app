@@ -8,12 +8,12 @@ import { applyMiddleware, compose, createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { weatherReducer } from './reducers/weather-reducer';
 import thunk from 'redux-thunk';
-
+// The first argument must be react-thunk (if you wish to use it), which will provide async through the app. The second argument is for devtools only. 
 const allStoreEnchancers = compose(
   applyMiddleware(thunk),
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
-
+//Store creation with some default states for search, and isLoading.
 const store = createStore(
   weatherReducer,
   { isLoading: true, search: 'default' },
