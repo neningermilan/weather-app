@@ -16,9 +16,12 @@ class FilterCities extends React.Component {
   }
 
   render() {
-    return <input type="text" onChange={this.updateSearch.bind(this)} />
+
+    return <input type="text" className="searchbar" onChange={this.updateSearch.bind(this)} placeholder="Search in cities..." />
+     
   }
 }
+
 const mapStateToProps = (state) => (state);
 const mapActionsToProps = {
   searchWeather: searchWeather

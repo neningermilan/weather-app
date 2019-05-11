@@ -17,7 +17,7 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div >
+      <div class="container">
         <Title />
         <FilterCities />
         <WeatherBox />
