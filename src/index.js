@@ -15,15 +15,11 @@ const allStoreEnchancers = compose(
 
 const store = createStore(
     weatherReducer,
-    {isLoading: true},
+    {isLoading: true, search: "default"},
     allStoreEnchancers);
 
 /***
  * Provider: so the app components can acces the store. 
  */
 ReactDOM.render(<Provider store={store}><App store={store} /></Provider>, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();

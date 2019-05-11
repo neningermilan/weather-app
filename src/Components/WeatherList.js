@@ -1,7 +1,9 @@
 import React from 'react'
 
-const WeatherList = ({ weatherListItem }) => (
-    <div>Név: {weatherListItem.name}</div>
-)
+const WeatherContainer = (weather, index) => (
+    <div key={`${index}`} className="col-sm-3">
+    Név: {weather.name}
+    </div>
+    )
 
-export default WeatherList;
+export default WeatherContainer;

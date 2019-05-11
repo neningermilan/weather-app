@@ -1,6 +1,6 @@
 import React from 'react';
 import Title from './components/Title';
-import FilterCities from './components/Filter';
+import FilterCities from './components/FilterCities';
 import WeatherBox from './components/WeatherBox';
 import './App.css';
 import { connect } from 'react-redux';
@@ -17,7 +17,7 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div >
         <Title />
         <FilterCities />
         <WeatherBox />
@@ -26,9 +26,7 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  weather: state
-})
+
 const mapActionsToProps = {
   onFetchWeather: fetchWeather
 };
@@ -38,4 +36,4 @@ const mapActionsToProps = {
  *  @mapActionsToProps dispatch actions from the components, so we don't need to use the dispatch function in the components. 
  * The called actions automatically dispatch from the store. 
  */
-export default connect(mapStateToProps, mapActionsToProps)(App);
+export default connect(null, mapActionsToProps)(App);
