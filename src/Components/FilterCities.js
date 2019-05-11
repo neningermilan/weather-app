@@ -11,7 +11,7 @@ class FilterCities extends React.Component {
   updateSearch(event) {
     const { isLoading, weather } = this.props
     if (!isLoading) {
-      this.props.searchWeather(event.target.value, weather);
+      this.props.searchWeather(event.target.value.toLowerCase(), weather);
     }
   }
 
