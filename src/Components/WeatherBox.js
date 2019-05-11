@@ -1,31 +1,22 @@
-import React from "react";
-import { connect } from "react-redux";
+import React from 'react';
+import { connect } from 'react-redux';
 
 let WeatherBox = ({ weather, isLoading, search }) => {
-  let weatherItem = "";
+  let weatherItem = '';
+  const displayedItem = search === 'default' ? weather : search;
   isLoading
     ? (weatherItem = (
         <div className="spinner-border centeredspinner" role="status">
           <span class="sr-only">Loading...</span>
         </div>
       ))
-    : search === "default"
-    ? (weatherItem = weather.map((weather, index) => (
+    : (weatherItem = displayedItem.map((displayedItem, index) => (
         <tr key={`${index}`}>
-          <td>{weather.name}</td>
-          <td>{weather.main.temp} ℃</td>
-          <td>{weather.main.temp_min} ℃</td>
-          <td>{weather.main.temp_max} ℃</td>
-          <td>{weather.main.humidity} %</td>
-        </tr>
-      )))
-    : (weatherItem = search.map((search, index) => (
-        <tr key={`${index}`}>
-          <td>{search.name}</td>
-          <td>{search.main.temp} ℃</td>
-          <td>{search.main.temp_min} ℃</td>
-          <td>{search.main.temp_max} ℃</td>
-          <td>{search.main.humidity} %</td>
+          <td>{displayedItem.name}</td>
+          <td>{displayedItem.main.temp} ℃</td>
+          <td>{displayedItem.main.temp_min} ℃</td>
+          <td>{displayedItem.main.temp_max} ℃</td>
+          <td>{displayedItem.main.humidity} %</td>
         </tr>
       )));
 

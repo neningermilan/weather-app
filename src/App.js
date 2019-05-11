@@ -1,9 +1,9 @@
-import React from "react";
-import Title from "./components/Title";
-import FilterCities from "./components/FilterCities";
-import WeatherBox from "./components/WeatherBox";
-import { connect } from "react-redux";
-import { fetchWeather } from "./actions/fetch-action";
+import React from 'react';
+import Title from './components/Title';
+import FilterCities from './components/FilterCities';
+import WeatherBox from './components/WeatherBox';
+import { connect } from 'react-redux';
+import { fetchWeather } from './actions/fetch-action';
 
 class App extends React.Component {
   constructor(props) {
@@ -12,6 +12,9 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    /**
+     * After the component is mounted, calls the API for data.
+     */
     this.props.onFetchWeather();
   }
   render() {
@@ -30,7 +33,6 @@ const mapActionsToProps = {
 };
 
 /**
- * @mapStateToProps receive the state of the store, then we can choose what props we want to add to the component.
  *  @mapActionsToProps dispatch actions from the components, so we don't need to use the dispatch function in the components.
  * The called actions automatically dispatch from the store.
  */

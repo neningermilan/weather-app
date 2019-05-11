@@ -1,5 +1,5 @@
-import { FETCH_WEATHER } from "../actions/fetch-action";
-import { SEARCH_WEATHER } from "../actions/search-action";
+import { FETCH_WEATHER } from '../actions/fetch-action';
+import { SEARCH_WEATHER } from '../actions/search-action';
 
 const initialState = { weather: [] };
 

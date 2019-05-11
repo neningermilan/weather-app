@@ -1,13 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "./css/index.css";
-import App from "./App";
-import * as serviceWorker from "./serviceWorker";
-import { applyMiddleware, compose, createStore } from "redux";
-import { Provider } from "react-redux";
-import { weatherReducer } from "./reducers/weather-reducer";
-import thunk from "redux-thunk";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import './css/index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
+import { applyMiddleware, compose, createStore } from 'redux';
+import { Provider } from 'react-redux';
+import { weatherReducer } from './reducers/weather-reducer';
+import thunk from 'redux-thunk';
 
 const allStoreEnchancers = compose(
   applyMiddleware(thunk),
@@ -16,7 +16,7 @@ const allStoreEnchancers = compose(
 
 const store = createStore(
   weatherReducer,
-  { isLoading: true, search: "default" },
+  { isLoading: true, search: 'default' },
   allStoreEnchancers
 );
 
@@ -27,6 +27,6 @@ ReactDOM.render(
   <Provider store={store}>
     <App store={store} />
   </Provider>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
 serviceWorker.unregister();

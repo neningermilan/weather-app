@@ -1,6 +1,6 @@
-import React from "react";
-import { connect } from "react-redux";
-import { searchWeather } from "../actions/search-action";
+import React from 'react';
+import { connect } from 'react-redux';
+import { searchWeather } from '../actions/search-action';
 
 class FilterCities extends React.Component {
   constructor(props) {

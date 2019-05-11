@@ -1,4 +1,4 @@
-export const SEARCH_WEATHER = "SEARCH_WEATHER";
+export const SEARCH_WEATHER = 'SEARCH_WEATHER';
 
 export const updateSearch = result => ({
   type: SEARCH_WEATHER,
@@ -8,7 +8,7 @@ export const updateSearch = result => ({
 export function searchWeather(searchValue, weather) {
   return dispatch => {
     let result = weather;
-    if (searchValue !== "") {
+    if (searchValue !== '') {
       result = weather.filter(res => {
         return res.name.toLowerCase().includes(searchValue);
       });
