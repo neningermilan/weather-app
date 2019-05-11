@@ -2,7 +2,6 @@ import React from 'react';
 import Title from './components/Title';
 import FilterCities from './components/FilterCities';
 import WeatherBox from './components/WeatherBox';
-import './App.css';
 import { connect } from 'react-redux';
 import { fetchWeather } from './actions/fetch-action';
 

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 let WeatherBox = ({ weather, isLoading, search }) => {
     let weatherItem = '';
     isLoading ?
-        weatherItem = <div className="spinner-border centered" role="status">
+        weatherItem = <div className="spinner-border centeredspinner" role="status">
             <span class="sr-only">Loading...</span>
         </div> :
         search === "default" ?
