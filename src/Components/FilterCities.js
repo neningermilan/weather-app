@@ -1,5 +1,5 @@
-import React from './node_modules/react';
-import { connect } from './node_modules/react-redux';
+import React from 'react';
+import { connect } from 'react-redux';
 import { searchWeather } from '../actions/search-action';
 
 class FilterCities extends React.Component {

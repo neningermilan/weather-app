@@ -1,5 +1,5 @@
-import React from './node_modules/react';
-import { connect } from './node_modules/react-redux';
+import React from 'react';
+import { connect } from 'react-redux';
 /**
  * Container functional component for the weather data. 
  * @returns JSX elements depending on the states. Either a loading spinner or a table with the data.
