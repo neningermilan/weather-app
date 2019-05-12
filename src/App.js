@@ -1,5 +1,5 @@
 import React from 'react';
-import Title from './components/Title';
+import Title from './components/Title.js';
 import FilterCities from './components/FilterCities';
 import WeatherBox from './components/WeatherBox';
 import { connect } from 'react-redux';
